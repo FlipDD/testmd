@@ -3,8 +3,8 @@
 ## Requirements
 - SDK setup
 - Lot Check
-    - Authoring Tool
-    - FsAccessLogChecker
+    - Confirm the package passes the Authoring Tool
+    - Check FsAccessLogChecker
 - Config
     - Set startup account
     - [Icons, meta artwork](https://github.com/kf-jbialo/porting-reference/wiki/Platform-Reference-Images)
@@ -29,11 +29,11 @@
         - Save data size: total size. Limit it to 64mb
         - Journal size: max size of an individual save file (each file is 32kb by default)
         - Once you calculate all of these sizes, the number you plugin have to be multiple of 16384 (16kb)
-        - Set it in the [config settings](https://www.notion.so/Astrea-fd128e79d1f24b359db404a2bb5dca92?pvs=21)
+        - Set it in the config settings
 - Hide innapropriate items
     - Hide items like Quit, Graphics settings, Join Discord, etc
     - Use icons for button prompts
-- [Terminology](https://www.notion.so/Astrea-fd128e79d1f24b359db404a2bb5dca92?pvs=21)
+- Terminology
     - “HD Rumble” instead of vibration
 - Auto language detection
 - ROM compression
