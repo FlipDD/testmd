@@ -59,11 +59,11 @@
 	<details>
 		<summary>Unreal</summary>
 	    	<pre><code>
-		@echo on
-		title Building GameName on Switch (Shipping)
-		echo Starting a Switch build...
-		C:/Unreal/GameName/4.27_v2/Engine/Binaries/DotNET/AutomationTool.exe BuildCookRun -project=C:/Unreal/GameName/Game/ProjectName.uproject -noP4 -clientconfig=Shipping -serverconfig=Shipping -nocompile -nocompileeditor -installed -ue4exe=C:\Unreal\GameName\4.27_v2\Engine\Binaries\Win64\UE4Editor-Cmd.exe -utf8output -platform=Switch -build -cook -map=+Map1+Map2+Map3 -unversionedcookedcontent -compressed -stage -package -stagingdirectory=M:/Builds/GameName/BuildMachine/v2/ -cmdline=""
-		echo Finished building for Switch.
+@echo on
+title Building GameName on Switch (Shipping)
+echo Starting a Switch build...
+C:/Unreal/GameName/4.27_v2/Engine/Binaries/DotNET/AutomationTool.exe BuildCookRun -project=C:/Unreal/GameName/Game/ProjectName.uproject -noP4 -clientconfig=Shipping -serverconfig=Shipping -nocompile -nocompileeditor -installed -ue4exe=C:\Unreal\GameName\4.27_v2\Engine\Binaries\Win64\UE4Editor-Cmd.exe -utf8output -platform=Switch -build -cook -map=+Map1+Map2+Map3 -unversionedcookedcontent -compressed -stage -package -stagingdirectory=M:/Builds/GameName/BuildMachine/v2/ -cmdline=""
+echo Finished building for Switch.
 		</code></pre>
 	</details>
 </details>
@@ -73,19 +73,19 @@
 	<details>
 		<summary> Analyze patch </summary>
 		<pre><code>
-		%NINTENDO_SDK_ROOT%\Tools\CommandLineTools\AuthoringTool\AuthoringTool.exe analyze-patch C:\GameName\Binaries\Switch\GameName-Switch-Shipping-patch.nsp --previous C:\GameName\Releases\Cert\Switch\LatestPatch\GameName-Switch-Shipping-Update-Patch2-RC1.nsp --original C:\GameName\Releases\Cert\Switch\OriginalRelease\GameName-Switch-Shipping.nsp
+%NINTENDO_SDK_ROOT%\Tools\CommandLineTools\AuthoringTool\AuthoringTool.exe analyze-patch C:\GameName\Binaries\Switch\GameName-Switch-Shipping-patch.nsp --previous C:\GameName\Releases\Cert\Switch\LatestPatch\GameName-Switch-Shipping-Update-Patch2-RC1.nsp --original C:\GameName\Releases\Cert\Switch\OriginalRelease\GameName-Switch-Shipping.nsp
 		</code></pre>	
    	</details>
 	<details>
 		<summary> Diff patch </summary>    
 	        <pre><code> 
-		%NINTENDO_SDK_ROOT%\Tools\CommandLineTools\AuthoringTool\AuthoringTool.exe diffpatch C:\GameName\Releases\Cert\Switch\OriginalRelease\GameName-Switch-Shipping.nsp C:\GameName\Releases\Cert\Switch\LatestPatch\GameName-Switch-Shipping-Update-Patch2-RC1.nsp C:\GameName\Binaries\Switch\GameName-Switch-Shipping-patch.nsp
+%NINTENDO_SDK_ROOT%\Tools\CommandLineTools\AuthoringTool\AuthoringTool.exe diffpatch C:\GameName\Releases\Cert\Switch\OriginalRelease\GameName-Switch-Shipping.nsp C:\GameName\Releases\Cert\Switch\LatestPatch\GameName-Switch-Shipping-Update-Patch2-RC1.nsp C:\GameName\Binaries\Switch\GameName-Switch-Shipping-patch.nsp
 	 	</code></pre>
  	</details>
     	<details>
 		<summary> Compare NSP </summary>
 		<pre><code>
-		%NINTENDO_SDK_ROOT%\Tools\CommandLineTools\AuthoringTool\AuthoringTool.exe comparensp C:\GameName\Binaries\Switch\GameName-Switch-Shipping-patch.nsp C:\GameName\Releases\Cert\Switch\OriginalRelease\GameName-Switch-Shipping.nsp
+%NINTENDO_SDK_ROOT%\Tools\CommandLineTools\AuthoringTool\AuthoringTool.exe comparensp C:\GameName\Binaries\Switch\GameName-Switch-Shipping-patch.nsp C:\GameName\Releases\Cert\Switch\OriginalRelease\GameName-Switch-Shipping.nsp
 		</code></pre>
 	</details>
 </details>
@@ -95,13 +95,13 @@
 	<details>
 		<summary> Copy files from the SD card to PC </summary>
 		<pre><code>
-		%NINTENDO_SDK_ROOT%\Tools\CommandLineTools\RunOnTarget.exe %NINTENDO_SDK_ROOT%\TargetTools\NX-NXFP2-a64\DevMenuCommand\Release\DevMenuCommand.nsp -- debug copy --source sdcard:/ --destination M:/nx_sdcard --skip-error-file
+%NINTENDO_SDK_ROOT%\Tools\CommandLineTools\RunOnTarget.exe %NINTENDO_SDK_ROOT%\TargetTools\NX-NXFP2-a64\DevMenuCommand\Release\DevMenuCommand.nsp -- debug copy --source sdcard:/ --destination M:/nx_sdcard --skip-error-file
 		</code></pre>	
    	</details>
 	<details>
 		<summary> Restore/Backup Save Data </summary>
 		<pre><code>
-		[KF Documentation](https://github.com/kf-jbialo/porting-reference/wiki/Console-Storage-Backup-Restore))
+[KF Documentation](https://github.com/kf-jbialo/porting-reference/wiki/Console-Storage-Backup-Restore))
 		</code></pre>	
    	</details>
 </details>
