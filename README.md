@@ -52,7 +52,7 @@
 - Some bugs that may be Switch specific due to its architecture and use of Forward Rendering: Reflection Captures, Volumetric Clouds.
 
 ## Useful commands
-<hr class="dotted">
+<hr>
 <details>
 	<summary><b> Make builds </b></summary> 
 	<details>
@@ -66,7 +66,7 @@ echo Finished building for Switch.
 		</code></pre>
 	</details>
 </details>
-<hr class="dotted">
+<hr">
 <details>
 	<summary><b> Patching </b></summary> 
 	<details>
@@ -88,7 +88,7 @@ echo Finished building for Switch.
 		</code></pre>
 	</details>
 </details>
-<hr class="dotted">
+<hr">
 <details>
 	<summary><b> Filesystem </b></summary> 
 	<details>
@@ -104,14 +104,14 @@ echo Finished building for Switch.
 		</code></pre>	
    	</details>
 </details>
-<hr class="dotted">
+<hr">
 <details>
 	<summary><b> FsAccessLogChecker </b></summary>
 	<pre><code>
 %NINTENDO_SDK_ROOT%\Tools\FsAccessLogChecker\FsAccessLogChecker.exe M:\nx_sdcard\FsAccessLog.txt -o M:\nx_sdcard\FsAccessLog-Result.txt
 	</code></pre>	
 </details>
-<hr class="dotted">
+<hr">
 <details>
 	<summary><b>Initialize EDev manually</b></summary>
 	<p>Fixes the kit not booting due to failing to update the firmware through Nintendo Dev Interface</p>
@@ -119,7 +119,7 @@ echo Finished building for Switch.
 %NINTENDO_SDK_ROOT%\Tools\CommandLineTools\InitializeEdevWin.exe
 	</code></pre>	
 </details>
-<hr class="dotted">
+<hr">
 
 ## Links and files
 
