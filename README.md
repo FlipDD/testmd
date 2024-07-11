@@ -113,7 +113,7 @@ echo Finished building for Switch.
 </details>
 <hr">
 <details name="main">
-	<summary><b> Initialize EDev manually</b></summary>
+	<summary><b>Initialize EDev manually</b></summary>
 	<p>Fixes the kit not booting due to failing to update the firmware through Nintendo Dev Interface</p>
 	<pre><code>
 %NINTENDO_SDK_ROOT%\Tools\CommandLineTools\InitializeEdevWin.exe
