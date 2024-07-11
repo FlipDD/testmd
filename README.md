@@ -69,20 +69,24 @@ Useful commands
 </details>
 
 <details>
-    <summary> Patching </summary> 
+	<summary> Patching </summary> 
+	<details>
+		<summary> Analyze patch </summary>    
+            
+	%NINTENDO_SDK_ROOT%\Tools\CommandLineTools\AuthoringTool\AuthoringTool.exe analyze-patch C:\GameName\Binaries\Switch\GameName-Switch-Shipping-patch.nsp --previous C:\GameName\Releases\Cert\Switch\LatestPatch\GameName-Switch-Shipping-Update-Patch2-RC1.nsp --original C:\GameName\Releases\Cert\Switch\OriginalRelease\GameName-Switch-Shipping.nsp
+			
+   </details>
+	<details>
+	<summary> Diff patch </summary>    
+            
+	%NINTENDO_SDK_ROOT%\Tools\CommandLineTools\AuthoringTool\AuthoringTool.exe diffpatch C:\GameName\Releases\Cert\Switch\OriginalRelease\GameName-Switch-Shipping.nsp C:\GameName\Releases\Cert\Switch\LatestPatch\GameName-Switch-Shipping-Update-Patch2-RC1.nsp C:\GameName\Binaries\Switch\GameName-Switch-Shipping-patch.nsp
+ 
+ 	</details>
     <details>
-        <summary> Analyze patch </summary>    
-            
-            %NINTENDO_SDK_ROOT%\Tools\CommandLineTools\AuthoringTool\AuthoringTool.exe analyze-patch C:\GameName\Binaries\Switch\GameName-Switch-Shipping-patch.nsp --previous C:\GameName\Releases\Cert\Switch\LatestPatch\GameName-Switch-Shipping-Update-Patch2-RC1.nsp --original C:\GameName\Releases\Cert\Switch\OriginalRelease\GameName-Switch-Shipping.nsp
+	<summary> Compare NSP </summary>
 
-</details>
-<details>
-        <summary> Diff patch </summary>    
-            
-            %NINTENDO_SDK_ROOT%\Tools\CommandLineTools\AuthoringTool\AuthoringTool.exe diffpatch C:\GameName\Releases\Cert\Switch\OriginalRelease\GameName-Switch-Shipping.nsp C:\GameName\Releases\Cert\Switch\LatestPatch\GameName-Switch-Shipping-Update-Patch2-RC1.nsp C:\GameName\Binaries\Switch\GameName-Switch-Shipping-patch.nsp
+%NINTENDO_SDK_ROOT%\Tools\CommandLineTools\AuthoringTool\AuthoringTool.exe comparensp C:\GameName\Binaries\Switch\GameName-Switch-Shipping-patch.nsp C:\GameName\Releases\Cert\Switch\OriginalRelease\GameName-Switch-Shipping.nsp
 
-</details>
-    
 </details>        
 
         
