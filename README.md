@@ -52,7 +52,20 @@
 
 Useful commands
 
-- Make builds
+<details>
+<summary>
+ - Make builds
+    <summary>
+    - Unreal
+    </summary>
+</summary>
+
+```
+[MakeBuilds.bat](https://prod-files-secure.s3.us-west-2.amazonaws.com/31274887-7daf-4c2f-b51f-9a29b90d9eb7/99bfea7a-0764-4f1f-9cc9-b2d18eeca39a/MakeBuilds.bat)
+```
+</details>
+
+
     - Unreal
         
         [MakeBuilds.bat](https://prod-files-secure.s3.us-west-2.amazonaws.com/31274887-7daf-4c2f-b51f-9a29b90d9eb7/99bfea7a-0764-4f1f-9cc9-b2d18eeca39a/MakeBuilds.bat)
