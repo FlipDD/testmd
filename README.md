@@ -65,8 +65,8 @@ C:/Unreal/GameName/4.27_v2/Engine/Binaries/DotNET/AutomationTool.exe BuildCookRu
 echo Finished building for Switch.
 		</code></pre>
 	</details>
-</details>
 <hr>
+</details>
 <details>
 	<summary><b>Patching </b></summary> 
 	<details>
