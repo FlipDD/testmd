@@ -53,10 +53,7 @@
 Useful commands
 
 <details>
-<summary>
- - Make builds
-    - Unreal
-</summary>
+<summary> - Make builds </summary>
 
 ```
 @echo on
