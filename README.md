@@ -88,7 +88,7 @@ echo Finished building for Switch.
 		</code></pre>
 	</details>
 </details>
----
+___
 <details>
 	<summary> Filesystem </summary> 
 	<details>
