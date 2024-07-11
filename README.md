@@ -54,7 +54,7 @@
 ## Useful commands
 
 <details>
-	<summary>Make builds</summary> 
+	<summary><b>Make builds</b></summary> 
 	<details>
 		<summary>Unreal</summary>
 	    	<pre><code>
