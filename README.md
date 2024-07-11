@@ -53,7 +53,7 @@
 
 ## Useful commands
 <hr>
-<details name="main">
+<details>
 	<summary><b>Make builds </b></summary> 
 	<details>
 		<summary> Unreal </summary>
@@ -67,7 +67,7 @@ echo Finished building for Switch.
 	</details>
 </details>
 <hr">
-<details name="main">
+<details>
 	<summary><b>Patching </b></summary> 
 	<details>
 		<summary> Analyze patch </summary>
@@ -89,15 +89,15 @@ echo Finished building for Switch.
 	</details>
 </details>
 <hr">
-<details name="main">
+<details>
 	<summary><b>Filesystem </b></summary> 
-	<details>
+	<details name="main">
 		<summary> Copy files from the SD card to PC </summary>
 		<pre><code>
 %NINTENDO_SDK_ROOT%\Tools\CommandLineTools\RunOnTarget.exe %NINTENDO_SDK_ROOT%\TargetTools\NX-NXFP2-a64\DevMenuCommand\Release\DevMenuCommand.nsp -- debug copy --source sdcard:/ --destination M:/nx_sdcard --skip-error-file
 		</code></pre>	
    	</details>
-	<details>
+	<details name="main">
 		<summary> Restore/Backup Save Data </summary>
 		<pre><code>
 [KF Documentation](https://github.com/kf-jbialo/porting-reference/wiki/Console-Storage-Backup-Restore))
@@ -105,14 +105,14 @@ echo Finished building for Switch.
    	</details>
 </details>
 <hr">
-<details name="main">
+<details>
 	<summary><b>FsAccessLogChecker </b></summary>
 	<pre><code>
 %NINTENDO_SDK_ROOT%\Tools\FsAccessLogChecker\FsAccessLogChecker.exe M:\nx_sdcard\FsAccessLog.txt -o M:\nx_sdcard\FsAccessLog-Result.txt
 	</code></pre>	
 </details>
 <hr">
-<details name="main">
+<details>
 	<summary><b>Initialize EDev manually</b></summary>
 	<p>Fixes the kit not booting due to failing to update the firmware through Nintendo Dev Interface</p>
 	<pre><code>
