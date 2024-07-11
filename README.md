@@ -55,13 +55,17 @@ Useful commands
 <details>
 <summary>
  - Make builds
-    <summary>
     - Unreal
-    </summary>
 </summary>
 
 ```
-[MakeBuilds.bat](https://prod-files-secure.s3.us-west-2.amazonaws.com/31274887-7daf-4c2f-b51f-9a29b90d9eb7/99bfea7a-0764-4f1f-9cc9-b2d18eeca39a/MakeBuilds.bat)
+@echo on
+
+title Building GameName on Switch (Shipping)
+
+echo Starting a Switch build...
+C:/Unreal/GameName/4.27_v2/Engine/Binaries/DotNET/AutomationTool.exe BuildCookRun -project=C:/Unreal/GameName/Game/ProjectName.uproject -noP4 -clientconfig=Shipping -serverconfig=Shipping -nocompile -nocompileeditor -installed -ue4exe=C:\Unreal\GameName\4.27_v2\Engine\Binaries\Win64\UE4Editor-Cmd.exe -utf8output -platform=Switch -build -cook -map=+MainMenu+Coliseum+CombatArena+Folktown+ForestOutSide+Kalios_Mountain_Persistent+Outside_Soma_PERSISTENT+SpiderDenPersistent+TempleOfPsyche_Persistent+TempleOfSoma_PERSISTENT+SukenTemple_Persistent+SunkenTempleDungeon_Persistent+InsideTheObservatory_PERSISTENT+OutsideTheObservatory_PERSISTENT+DeepForest_Persistent+OutsideSpiderDenPERSISTENT+ForestCave+SetaelesDungeon_PERSISTENT+OutsideGameName_PERSISTENT+TheGameName_PERSISTENT+StartCamp_Persistent+TemplteOfTheChosen_PERSISTENT -unversionedcookedcontent -compressed -stage -package -stagingdirectory=M:/Builds/GameName/BuildMachine/v2/ -cmdline=""
+echo Finished building for Switch.
 ```
 </details>
 
