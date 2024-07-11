@@ -1,5 +1,6 @@
-# Switch port
+# Switch porting process
 
+## Requirements
 - SDK setup
 - Lot Check
     - Authoring Tool
@@ -50,98 +51,77 @@
         - Platform specific min LOD (possibly with cheaper materials), VFX scalability, SwitchDeviceProfiles.ini
 - Some bugs that may be Switch specific due to its architecture and use of Forward Rendering: Reflection Captures, Volumetric Clouds.
 
-Useful commands
+## Useful commands
 
 <details>
 	<summary>Make builds</summary> 
 	<p>smt smt</p>
 	<details>
-	<summary>Unreal</summary>
-    <pre><code>
-	@echo on
-	title Building GameName on Switch (Shipping)
-	echo Starting a Switch build...
-	C:/Unreal/GameName/4.27_v2/Engine/Binaries/DotNET/AutomationTool.exe BuildCookRun -project=C:/Unreal/GameName/Game/ProjectName.uproject -noP4 -clientconfig=Shipping -serverconfig=Shipping -nocompile -nocompileeditor -installed -ue4exe=C:\Unreal\GameName\4.27_v2\Engine\Binaries\Win64\UE4Editor-Cmd.exe -utf8output -platform=Switch -build -cook -map=+MainMenu+Coliseum+CombatArena+Folktown+ForestOutSide+Kalios_Mountain_Persistent+Outside_Soma_PERSISTENT+SpiderDenPersistent+TempleOfPsyche_Persistent+TempleOfSoma_PERSISTENT+SukenTemple_Persistent+SunkenTempleDungeon_Persistent+InsideTheObservatory_PERSISTENT+OutsideTheObservatory_PERSISTENT+DeepForest_Persistent+OutsideSpiderDenPERSISTENT+ForestCave+SetaelesDungeon_PERSISTENT+OutsideGameName_PERSISTENT+TheGameName_PERSISTENT+StartCamp_Persistent+TemplteOfTheChosen_PERSISTENT -unversionedcookedcontent -compressed -stage -package -stagingdirectory=M:/Builds/GameName/BuildMachine/v2/ -cmdline=""
-	echo Finished building for Switch.
-	</code></pre>
+		<summary>Unreal</summary>
+	    	<pre><code>
+		@echo on
+		title Building GameName on Switch (Shipping)
+		echo Starting a Switch build...
+		C:/Unreal/GameName/4.27_v2/Engine/Binaries/DotNET/AutomationTool.exe BuildCookRun -project=C:/Unreal/GameName/Game/ProjectName.uproject -noP4 -clientconfig=Shipping -serverconfig=Shipping -nocompile -nocompileeditor -installed -ue4exe=C:\Unreal\GameName\4.27_v2\Engine\Binaries\Win64\UE4Editor-Cmd.exe -utf8output -platform=Switch -build -cook -map=+Map1+Map2+Map3 -unversionedcookedcontent -compressed -stage -package -stagingdirectory=M:/Builds/GameName/BuildMachine/v2/ -cmdline=""
+		echo Finished building for Switch.
+		</code></pre>
 	</details>
 </details>
 
 <details>
 	<summary> Patching </summary> 
 	<details>
-	<summary> Analyze patch </summary>    
-            
-	%NINTENDO_SDK_ROOT%\Tools\CommandLineTools\AuthoringTool\AuthoringTool.exe analyze-patch C:\GameName\Binaries\Switch\GameName-Switch-Shipping-patch.nsp --previous C:\GameName\Releases\Cert\Switch\LatestPatch\GameName-Switch-Shipping-Update-Patch2-RC1.nsp --original C:\GameName\Releases\Cert\Switch\OriginalRelease\GameName-Switch-Shipping.nsp
-			
-   </details>
+		<summary> Analyze patch </summary>
+		<pre><code>
+		%NINTENDO_SDK_ROOT%\Tools\CommandLineTools\AuthoringTool\AuthoringTool.exe analyze-patch C:\GameName\Binaries\Switch\GameName-Switch-Shipping-patch.nsp --previous C:\GameName\Releases\Cert\Switch\LatestPatch\GameName-Switch-Shipping-Update-Patch2-RC1.nsp --original C:\GameName\Releases\Cert\Switch\OriginalRelease\GameName-Switch-Shipping.nsp
+		</code></pre>	
+   	</details>
 	<details>
-	<summary> Diff patch </summary>    
-            
-	%NINTENDO_SDK_ROOT%\Tools\CommandLineTools\AuthoringTool\AuthoringTool.exe diffpatch C:\GameName\Releases\Cert\Switch\OriginalRelease\GameName-Switch-Shipping.nsp C:\GameName\Releases\Cert\Switch\LatestPatch\GameName-Switch-Shipping-Update-Patch2-RC1.nsp C:\GameName\Binaries\Switch\GameName-Switch-Shipping-patch.nsp
- 
+		<summary> Diff patch </summary>    
+	        <pre><code> 
+		%NINTENDO_SDK_ROOT%\Tools\CommandLineTools\AuthoringTool\AuthoringTool.exe diffpatch C:\GameName\Releases\Cert\Switch\OriginalRelease\GameName-Switch-Shipping.nsp C:\GameName\Releases\Cert\Switch\LatestPatch\GameName-Switch-Shipping-Update-Patch2-RC1.nsp C:\GameName\Binaries\Switch\GameName-Switch-Shipping-patch.nsp
+	 	</code></pre>
  	</details>
-    <details>
-	<summary> Compare NSP </summary>
+    	<details>
+		<summary> Compare NSP </summary>
+		<pre><code>
+		%NINTENDO_SDK_ROOT%\Tools\CommandLineTools\AuthoringTool\AuthoringTool.exe comparensp C:\GameName\Binaries\Switch\GameName-Switch-Shipping-patch.nsp C:\GameName\Releases\Cert\Switch\OriginalRelease\GameName-Switch-Shipping.nsp
+		</code></pre>
+	</details>
+</details>
 
-	%NINTENDO_SDK_ROOT%\Tools\CommandLineTools\AuthoringTool\AuthoringTool.exe comparensp C:\GameName\Binaries\Switch\GameName-Switch-Shipping-patch.nsp C:\GameName\Releases\Cert\Switch\OriginalRelease\GameName-Switch-Shipping.nsp
+<details>
+	<summary> Filesystem </summary> 
+	<details>
+		<summary> Copy files from the SD card to PC </summary>
+		<pre><code>
+		%NINTENDO_SDK_ROOT%\Tools\CommandLineTools\RunOnTarget.exe %NINTENDO_SDK_ROOT%\TargetTools\NX-NXFP2-a64\DevMenuCommand\Release\DevMenuCommand.nsp -- debug copy --source sdcard:/ --destination M:/nx_sdcard --skip-error-file
+		</code></pre>	
+   	</details>
+	<details>
+		<summary> Restore/Backup Save Data </summary>
+		<pre><code>
+		[KF Documentation](https://github.com/kf-jbialo/porting-reference/wiki/Console-Storage-Backup-Restore))
+		</code></pre>	
+   	</details>
+</details>
 
-</details>        
+<details>
+	<summary> FsAccessLogChecker </summary>
+	<pre><code>
+	%NINTENDO_SDK_ROOT%\Tools\FsAccessLogChecker\FsAccessLogChecker.exe M:\nx_sdcard\FsAccessLog.txt -o M:\nx_sdcard\FsAccessLog-Result.txt
+	</code></pre>	
+</details>
 
-        
-- Filesystem
-    - Copy files from the SD card to PC
-        
-        `%NINTENDO_SDK_ROOT%\Tools\CommandLineTools\RunOnTarget.exe %NINTENDO_SDK_ROOT%\TargetTools\NX-NXFP2-a64\DevMenuCommand\Release\DevMenuCommand.nsp -- debug copy --source sdcard:/ --destination M:/nx_sdcard --skip-error-file`
-        
-    - Restore/Backup Save Data
-        
-        https://github.com/kf-jbialo/porting-reference/wiki/Console-Storage-Backup-Restore
-        
-- FsAccessLogChecker
-    
-    `%NINTENDO_SDK_ROOT%\Tools\FsAccessLogChecker\FsAccessLogChecker.exe M:\nx_sdcard\FsAccessLog.txt -o M:\nx_sdcard\FsAccessLog-Result.txt` 
-    
-- Initialize EDev manually
-    
-    Fixes the kit not booting due to failing to update the firmware through Nintendo Dev Interface
-    
-    `%NINTENDO_SDK_ROOT%\Tools\CommandLineTools\InitializeEdevWin.exe`
-
-  <details>
-  <summary>Nested</summary>
-  <details>
-    <summary>Nested</summary>
-    <p>lolwat</p>
-    <details>
-      <summary>Nested</summary>
-      <p>lolwat</p>
-    </details>
-  </details>
-  <details>
-    <summary>Nested</summary>
-    <p>lolwat</p>
-  </details>
-  <details>
-    <summary>Nested</summary>
-    <p>lolwat</p>
-  </details>
-  <p>lolwat</p>
+<details>
+	<summary> Initialize EDev manually </summary>
+	<p>Fixes the kit not booting due to failing to update the firmware through Nintendo Dev Interface</p>
+	<pre><code>
+	`%NINTENDO_SDK_ROOT%\Tools\CommandLineTools\InitializeEdevWin.exe
+	</code></pre>	
 </details>
 
 
-<pre><code>
-My pre-formatted code
-    here.
-</code></pre>
-
-If you are actually "quoting" a block of code, then the markup would be:
-
-<blockquote><pre><code>
-My pre-formatted "quoted" code here.
-</code></pre></blockquote>
-
-
-Links and files
+## Links and files
 
 [NintendoSwitch-Terms.xlsm](https://prod-files-secure.s3.us-west-2.amazonaws.com/31274887-7daf-4c2f-b51f-9a29b90d9eb7/ae4dec49-d11a-4a3c-989c-a2c267257786/NintendoSwitch-Terms.xlsm)
