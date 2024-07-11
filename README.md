@@ -55,7 +55,6 @@
 
 <details>
 	<summary>Make builds</summary> 
-	<p>smt smt</p>
 	<details>
 		<summary>Unreal</summary>
 	    	<pre><code>
@@ -109,7 +108,7 @@ echo Finished building for Switch.
 <details>
 	<summary> FsAccessLogChecker </summary>
 	<pre><code>
-	%NINTENDO_SDK_ROOT%\Tools\FsAccessLogChecker\FsAccessLogChecker.exe M:\nx_sdcard\FsAccessLog.txt -o M:\nx_sdcard\FsAccessLog-Result.txt
+%NINTENDO_SDK_ROOT%\Tools\FsAccessLogChecker\FsAccessLogChecker.exe M:\nx_sdcard\FsAccessLog.txt -o M:\nx_sdcard\FsAccessLog-Result.txt
 	</code></pre>	
 </details>
 
@@ -117,7 +116,7 @@ echo Finished building for Switch.
 	<summary> Initialize EDev manually </summary>
 	<p>Fixes the kit not booting due to failing to update the firmware through Nintendo Dev Interface</p>
 	<pre><code>
-	`%NINTENDO_SDK_ROOT%\Tools\CommandLineTools\InitializeEdevWin.exe
+%NINTENDO_SDK_ROOT%\Tools\CommandLineTools\InitializeEdevWin.exe
 	</code></pre>	
 </details>
 
