@@ -87,8 +87,8 @@ echo Finished building for Switch.
 %NINTENDO_SDK_ROOT%\Tools\CommandLineTools\AuthoringTool\AuthoringTool.exe comparensp C:\GameName\Binaries\Switch\GameName-Switch-Shipping-patch.nsp C:\GameName\Releases\Cert\Switch\OriginalRelease\GameName-Switch-Shipping.nsp
 		</code></pre>
 	</details>
-</details>
 <hr>
+</details>
 <details>
 	<summary><b>Filesystem </b></summary> 
 	<details>
@@ -103,23 +103,23 @@ echo Finished building for Switch.
 [KF Documentation](https://github.com/kf-jbialo/porting-reference/wiki/Console-Storage-Backup-Restore))
 		</code></pre>	
    	</details>
-</details>
 <hr>
+</details>
 <details>
 	<summary><b>FsAccessLogChecker </b></summary>
 	<pre><code>
 %NINTENDO_SDK_ROOT%\Tools\FsAccessLogChecker\FsAccessLogChecker.exe M:\nx_sdcard\FsAccessLog.txt -o M:\nx_sdcard\FsAccessLog-Result.txt
 	</code></pre>	
-</details>
 <hr>
+</details>
 <details>
 	<summary><b>Initialize EDev manually</b></summary>
 	<p>Fixes the kit not booting due to failing to update the firmware through Nintendo Dev Interface</p>
 	<pre><code>
 %NINTENDO_SDK_ROOT%\Tools\CommandLineTools\InitializeEdevWin.exe
 	</code></pre>	
-</details>
 <hr>
+</details>
 
 ## Links and files
 
