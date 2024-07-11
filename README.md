@@ -52,7 +52,7 @@
 - Some bugs that may be Switch specific due to its architecture and use of Forward Rendering: Reflection Captures, Volumetric Clouds.
 
 ## Useful commands
-<hr>
+
 <details>
 	<summary><b>Make builds </b></summary> 
 	<details>
@@ -91,13 +91,13 @@ echo Finished building for Switch.
 <hr>
 <details>
 	<summary><b>Filesystem </b></summary> 
-	<details name="main">
+	<details>
 		<summary> Copy files from the SD card to PC </summary>
 		<pre><code>
 %NINTENDO_SDK_ROOT%\Tools\CommandLineTools\RunOnTarget.exe %NINTENDO_SDK_ROOT%\TargetTools\NX-NXFP2-a64\DevMenuCommand\Release\DevMenuCommand.nsp -- debug copy --source sdcard:/ --destination M:/nx_sdcard --skip-error-file
 		</code></pre>	
    	</details>
-	<details name="main">
+	<details>
 		<summary> Restore/Backup Save Data </summary>
 		<pre><code>
 [KF Documentation](https://github.com/kf-jbialo/porting-reference/wiki/Console-Storage-Backup-Restore))
