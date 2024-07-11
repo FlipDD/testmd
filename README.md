@@ -88,7 +88,7 @@ echo Finished building for Switch.
 		</code></pre>
 	</details>
 </details>
-
+---
 <details>
 	<summary> Filesystem </summary> 
 	<details>
@@ -104,7 +104,7 @@ echo Finished building for Switch.
 		</code></pre>	
    	</details>
 </details>
-
+***
 <details>
 	<summary> FsAccessLogChecker </summary>
 	<pre><code>
