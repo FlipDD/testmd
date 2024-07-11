@@ -53,7 +53,7 @@
 
 ## Useful commands
 <hr>
-<details>
+<details name="main">
 	<summary><b>Make builds </b></summary> 
 	<details>
 		<summary> Unreal </summary>
@@ -67,7 +67,7 @@ echo Finished building for Switch.
 	</details>
 </details>
 <hr">
-<details>
+<details name="main">
 	<summary><b>Patching </b></summary> 
 	<details>
 		<summary> Analyze patch </summary>
@@ -89,7 +89,7 @@ echo Finished building for Switch.
 	</details>
 </details>
 <hr">
-<details>
+<details name="main">
 	<summary><b>Filesystem </b></summary> 
 	<details>
 		<summary> Copy files from the SD card to PC </summary>
@@ -105,14 +105,14 @@ echo Finished building for Switch.
    	</details>
 </details>
 <hr">
-<details>
+<details name="main">
 	<summary><b>FsAccessLogChecker </b></summary>
 	<pre><code>
 %NINTENDO_SDK_ROOT%\Tools\FsAccessLogChecker\FsAccessLogChecker.exe M:\nx_sdcard\FsAccessLog.txt -o M:\nx_sdcard\FsAccessLog-Result.txt
 	</code></pre>	
 </details>
 <hr">
-<details>
+<details name="main">
 	<summary><b> Initialize EDev manually</b></summary>
 	<p>Fixes the kit not booting due to failing to update the firmware through Nintendo Dev Interface</p>
 	<pre><code>
