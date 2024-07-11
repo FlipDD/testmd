@@ -88,7 +88,7 @@ echo Finished building for Switch.
 		</code></pre>
 	</details>
 </details>
-___
+<hr class="dotted">
 <details>
 	<summary> Filesystem </summary> 
 	<details>
@@ -104,14 +104,14 @@ ___
 		</code></pre>	
    	</details>
 </details>
-***
+<hr class="dotted">
 <details>
 	<summary> FsAccessLogChecker </summary>
 	<pre><code>
 %NINTENDO_SDK_ROOT%\Tools\FsAccessLogChecker\FsAccessLogChecker.exe M:\nx_sdcard\FsAccessLog.txt -o M:\nx_sdcard\FsAccessLog-Result.txt
 	</code></pre>	
 </details>
-
+<hr class="dotted">
 <details>
 	<summary> Initialize EDev manually </summary>
 	<p>Fixes the kit not booting due to failing to update the firmware through Nintendo Dev Interface</p>
