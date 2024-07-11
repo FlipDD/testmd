@@ -41,8 +41,8 @@
 - No System.io methods
 - Leaderboards
     - Requires NEX compliance
-- CPU Boost Mode
-    - Remember there’s a time limit. Link to docs
+- [CPU Boost Mode](https://developer.nintendo.com/html/online-docs/g1kr9vj6-en/Packages/SDK/NintendoSDK/Documents/Package/contents/Pages/Page_503094447.html)
+    - Remember there’s a time limit
 - Addressables
     - Not a requirement but probably need it 90% of the times
 - Performance
