@@ -57,21 +57,21 @@ Useful commands
     <details>
     <summary>Unreal</summary>
         
-        @echo on
+	@echo on
+	
+	title Building GameName on Switch (Shipping)
+	
+	echo Starting a Switch build...
+	C:/Unreal/GameName/4.27_v2/Engine/Binaries/DotNET/AutomationTool.exe BuildCookRun -project=C:/Unreal/GameName/Game/ProjectName.uproject -noP4 -clientconfig=Shipping -serverconfig=Shipping -nocompile -nocompileeditor -installed -ue4exe=C:\Unreal\GameName\4.27_v2\Engine\Binaries\Win64\UE4Editor-Cmd.exe -utf8output -platform=Switch -build -cook -map=+MainMenu+Coliseum+CombatArena+Folktown+ForestOutSide+Kalios_Mountain_Persistent+Outside_Soma_PERSISTENT+SpiderDenPersistent+TempleOfPsyche_Persistent+TempleOfSoma_PERSISTENT+SukenTemple_Persistent+SunkenTempleDungeon_Persistent+InsideTheObservatory_PERSISTENT+OutsideTheObservatory_PERSISTENT+DeepForest_Persistent+OutsideSpiderDenPERSISTENT+ForestCave+SetaelesDungeon_PERSISTENT+OutsideGameName_PERSISTENT+TheGameName_PERSISTENT+StartCamp_Persistent+TemplteOfTheChosen_PERSISTENT -unversionedcookedcontent -compressed -stage -package -stagingdirectory=M:/Builds/GameName/BuildMachine/v2/ -cmdline=""
+	echo Finished building for Switch.
         
-        title Building GameName on Switch (Shipping)
-        
-        echo Starting a Switch build...
-        C:/Unreal/GameName/4.27_v2/Engine/Binaries/DotNET/AutomationTool.exe BuildCookRun -project=C:/Unreal/GameName/Game/ProjectName.uproject -noP4 -clientconfig=Shipping -serverconfig=Shipping -nocompile -nocompileeditor -installed -ue4exe=C:\Unreal\GameName\4.27_v2\Engine\Binaries\Win64\UE4Editor-Cmd.exe -utf8output -platform=Switch -build -cook -map=+MainMenu+Coliseum+CombatArena+Folktown+ForestOutSide+Kalios_Mountain_Persistent+Outside_Soma_PERSISTENT+SpiderDenPersistent+TempleOfPsyche_Persistent+TempleOfSoma_PERSISTENT+SukenTemple_Persistent+SunkenTempleDungeon_Persistent+InsideTheObservatory_PERSISTENT+OutsideTheObservatory_PERSISTENT+DeepForest_Persistent+OutsideSpiderDenPERSISTENT+ForestCave+SetaelesDungeon_PERSISTENT+OutsideGameName_PERSISTENT+TheGameName_PERSISTENT+StartCamp_Persistent+TemplteOfTheChosen_PERSISTENT -unversionedcookedcontent -compressed -stage -package -stagingdirectory=M:/Builds/GameName/BuildMachine/v2/ -cmdline=""
-        echo Finished building for Switch.
-        
-</details>
+	</details>
 </details>
 
 <details>
 	<summary> Patching </summary> 
 	<details>
-		<summary> Analyze patch </summary>    
+	<summary> Analyze patch </summary>    
             
 	%NINTENDO_SDK_ROOT%\Tools\CommandLineTools\AuthoringTool\AuthoringTool.exe analyze-patch C:\GameName\Binaries\Switch\GameName-Switch-Shipping-patch.nsp --previous C:\GameName\Releases\Cert\Switch\LatestPatch\GameName-Switch-Shipping-Update-Patch2-RC1.nsp --original C:\GameName\Releases\Cert\Switch\OriginalRelease\GameName-Switch-Shipping.nsp
 			
@@ -85,18 +85,10 @@ Useful commands
     <details>
 	<summary> Compare NSP </summary>
 
-%NINTENDO_SDK_ROOT%\Tools\CommandLineTools\AuthoringTool\AuthoringTool.exe comparensp C:\GameName\Binaries\Switch\GameName-Switch-Shipping-patch.nsp C:\GameName\Releases\Cert\Switch\OriginalRelease\GameName-Switch-Shipping.nsp
+	%NINTENDO_SDK_ROOT%\Tools\CommandLineTools\AuthoringTool\AuthoringTool.exe comparensp C:\GameName\Binaries\Switch\GameName-Switch-Shipping-patch.nsp C:\GameName\Releases\Cert\Switch\OriginalRelease\GameName-Switch-Shipping.nsp
 
 </details>        
 
-        
-    - Diff patch
-        
-        `%NINTENDO_SDK_ROOT%\Tools\CommandLineTools\AuthoringTool\AuthoringTool.exe diffpatch C:\GameName\Releases\Cert\Switch\OriginalRelease\GameName-Switch-Shipping.nsp C:\GameName\Releases\Cert\Switch\LatestPatch\GameName-Switch-Shipping-Update-Patch2-RC1.nsp C:\GameName\Binaries\Switch\GameName-Switch-Shipping-patch.nsp`
-        
-    - Compare NSP
-        
-        `%NINTENDO_SDK_ROOT%\Tools\CommandLineTools\AuthoringTool\AuthoringTool.exe comparensp C:\GameName\Binaries\Switch\GameName-Switch-Shipping-patch.nsp C:\GameName\Releases\Cert\Switch\OriginalRelease\GameName-Switch-Shipping.nsp`
         
 - Filesystem
     - Copy files from the SD card to PC
@@ -137,7 +129,19 @@ Useful commands
   </details>
   <p>lolwat</p>
 </details>
-    
+
+
+<pre><code>
+My pre-formatted code
+    here.
+</code></pre>
+
+If you are actually "quoting" a block of code, then the markup would be:
+
+<blockquote><pre><code>
+My pre-formatted "quoted" code here.
+</code></pre></blockquote>
+
 
 Links and files
 
