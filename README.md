@@ -105,6 +105,27 @@ Useful commands
     Fixes the kit not booting due to failing to update the firmware through Nintendo Dev Interface
     
     `%NINTENDO_SDK_ROOT%\Tools\CommandLineTools\InitializeEdevWin.exe`
+
+  <details>
+  <summary>Nested</summary>
+  <details>
+    <summary>Nested</summary>
+    <p>lolwat</p>
+    <details>
+      <summary>Nested</summary>
+      <p>lolwat</p>
+    </details>
+  </details>
+  <details>
+    <summary>Nested</summary>
+    <p>lolwat</p>
+  </details>
+  <details>
+    <summary>Nested</summary>
+    <p>lolwat</p>
+  </details>
+  <p>lolwat</p>
+</details>
     
 
 Links and files
