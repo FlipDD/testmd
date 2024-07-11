@@ -56,7 +56,7 @@
 <details>
 	<summary><b>Make builds </b></summary> 
 	<details>
-		<summary> Unreal </summary>
+		<summary>    Unreal </summary>
 	    	<pre><code>
 @echo on
 title Building GameName on Switch (Shipping)
