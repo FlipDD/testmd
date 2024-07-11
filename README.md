@@ -66,7 +66,7 @@ echo Finished building for Switch.
 		</code></pre>
 	</details>
 </details>
-
+<hr class="dotted">
 <details>
 	<summary> Patching </summary> 
 	<details>
