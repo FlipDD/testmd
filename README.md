@@ -52,7 +52,7 @@
 - Some bugs that may be Switch specific due to its architecture and use of Forward Rendering: Reflection Captures, Volumetric Clouds.
 
 ## Useful commands
-
+<hr class="dotted">
 <details>
 	<summary><b> Make builds </b></summary> 
 	<details>
@@ -119,7 +119,7 @@ echo Finished building for Switch.
 %NINTENDO_SDK_ROOT%\Tools\CommandLineTools\InitializeEdevWin.exe
 	</code></pre>	
 </details>
-
+<hr class="dotted">
 
 ## Links and files
 
